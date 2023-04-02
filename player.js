@@ -3,4 +3,12 @@ export default class Player {
 		this.name = name;
 		this.cards = cards;
 	}
+
+	get getCards() {
+		return this.cards;
+	}
+
+	get getName() {
+		return this.name;
+	}
 }

@@ -1,4 +1,4 @@
-const SUITS = ["♥", "♦", "♣", "♠"];
+const SUITS = ["♥", "♦", "♣", "♠️"];
 const VALUES = [
 	"2",
 	"3",
@@ -24,6 +24,18 @@ export default class Deck {
 		return this.cards.length;
 	}
 
+	get lastCard() {
+		return this.cards.slice(-1)[0];
+	}
+
+	get top() {
+		return this.cards[0];
+	}
+
+	toString() {
+		return this.cards.join(", ");
+	}
+
 	shuffle() {
 		for (let i = this.numberOfCards - 1; i > 0; i--) {
 			let newIndex = Math.floor(Math.random() * (i + 1));
@@ -39,6 +51,10 @@ class Card {
 	constructor(suit, value) {
 		this.suit = suit;
 		this.value = value;
+	}
+
+	show() {
+		return `${this.value} of ${this.suit}`;
 	}
 }
 
