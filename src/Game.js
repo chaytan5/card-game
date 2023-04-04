@@ -40,4 +40,18 @@ export default class Game {
 			this.players.push(new Player(answer.playerName));
 		}
 	}
+
+	dealCards() {
+		for (let i = 0; i < 5; i++) {
+			for (const player of this.players) {
+				player.hand.push(this.drawPile.draw());
+			}
+		}
+		this.discardPile.push(this.drawPile.draw());
+	}
+
+	isValidCard(card) {
+		const topCard = this.discardPile[this.discardPile.length - 1];
+		return card.rank === topCard.rank || card.suit === topCard.suit;
+	}
 }
