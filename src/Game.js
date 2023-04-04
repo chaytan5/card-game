@@ -1,4 +1,6 @@
 import inquirer from "inquirer";
+import Deck from "./Deck.js";
+import Player from "./Player.js";
 
 export default class Game {
 	constructor() {
