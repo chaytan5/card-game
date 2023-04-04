@@ -5,10 +5,10 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
-		"start": "node index.js",
+		"start": "node rungame.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
-	"author": "Chetan Arora",
+	"author": "Chetan Arora <chaytanarora@gmail.com> (https://github.com/chaytan5)",
 	"license": "ISC",
 	"dependencies": {
 		"inquirer": "^9.1.5"
